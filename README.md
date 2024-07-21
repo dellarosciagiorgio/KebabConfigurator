@@ -8,7 +8,7 @@ The application's logic is built upon an [ontology](./app/src/main/resources/) r
 
 For an in-depth look at the project, please refer to the [report](./Relazione.pdf).
 
-For detailed API documentation, check the [JavaDoc](CHANGE_PUT_LINK_TO_GITHUB_PAGE).
+For detailed API documentation, check the [JavaDoc](./JavaDoc/).
 
 ## Setup
 
