@@ -4,7 +4,7 @@ A Java application that simulates a kebab ordering experience, satisfying multip
 
 Once the parameters have been selected, the configurator will show the perfect kebab for you!
 
-The application's logic is built upon an [ontology](./app/src/main/resources/KebabConfigurator.rdf) realized in Protégé.
+The application's logic is built upon an [ontology](./app/src/main/resources/) realized in Protégé.
 
 For an in-depth look at the project, please refer to the [report](./../../Relazione.pdf).
 
