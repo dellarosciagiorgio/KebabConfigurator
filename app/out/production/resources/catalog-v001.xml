@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1721382465205" name="https://dbpedia.org/ontology/Animal" uri="Animal.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1721382465205" name="https://dbpedia.org/ontology/Disease" uri="Disease.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1721382465205" name="https://dbpedia.org/ontology/Food" uri="Food.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1721382465205" name="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator" uri="KebabConfigurator.rdf"/>
+    </group>
+</catalog>

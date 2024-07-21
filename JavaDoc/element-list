@@ -1,0 +1,10 @@
+it.unicam.cs.mgc.kebabConfigurator
+it.unicam.cs.mgc.kebabConfigurator.model.builder
+it.unicam.cs.mgc.kebabConfigurator.model.controller
+it.unicam.cs.mgc.kebabConfigurator.model.parser
+it.unicam.cs.mgc.kebabConfigurator.model.sparql
+it.unicam.cs.mgc.kebabConfigurator.model.util
+it.unicam.cs.mgc.kebabConfigurator.viewer
+it.unicam.cs.mgc.kebabConfigurator.viewer.chooser
+it.unicam.cs.mgc.kebabConfigurator.viewer.cleaner
+it.unicam.cs.mgc.kebabConfigurator.viewer.resulter

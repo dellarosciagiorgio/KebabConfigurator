@@ -1,0 +1,2272 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#"
+     xml:base="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:kbb="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:terms1="http://open.vocab.org/terms/"
+     xmlns:powder-s="http://www.w3.org/2007/05/powder-s#">
+    <owl:Ontology rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator">
+        <owl:versionIRI rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator/1.0.0"/>
+        <owl:imports rdf:resource="https://dbpedia.org/ontology/Animal"/>
+        <owl:imports rdf:resource="https://dbpedia.org/ontology/Disease"/>
+        <owl:imports rdf:resource="https://dbpedia.org/ontology/Food"/>
+        <dc:creator xml:lang="en">Giorgio Della Roscia</dc:creator>
+        <dc:description xml:lang="en">This is an ontology about the process of composing a kebab</dc:description>
+        <dc:title xml:lang="en">Kebab configurator</dc:title>
+        <rdfs:label xml:lang="en">KebabConfigurator</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://open.vocab.org/terms/defines -->
+
+    <owl:AnnotationProperty rdf:about="http://open.vocab.org/terms/defines"/>
+    
+
+
+    <!-- http://open.vocab.org/terms/describes -->
+
+    <owl:AnnotationProperty rdf:about="http://open.vocab.org/terms/describes"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2007/05/powder-s#describedby -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2007/05/powder-s#describedby"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/disease -->
+
+    <rdf:Description rdf:about="http://dbpedia.org/ontology/disease">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person"/>
+        <rdfs:label xml:lang="en">hasDisease</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/food -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/food">
+        <owl:equivalentProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#contains"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasIngredient</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#allowsToEat -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#allowsToEat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyDisjointWith rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#doNotAllowToEat"/>
+        <rdfs:label xml:lang="en">allowsToEat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#believes -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#believes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person"/>
+        <rdfs:range rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Religion"/>
+        <rdfs:label xml:lang="en">believes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#belongsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">Related to food and the corrisponding kingdom of living beings in which it fits</rdfs:comment>
+        <rdfs:label xml:lang="en">belongsTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#canBeCertified -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#canBeCertified">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <rdfs:range rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCertification"/>
+        <rdfs:comment xml:lang="en">Food can be certified for religious purposes</rdfs:comment>
+        <rdfs:label xml:lang="en">canBeCertified</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#contains -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#contains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Useful for the presence of culinary elements to highlight in the preferences or intolerances</rdfs:comment>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#doNotAllowToEat -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#doNotAllowToEat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Restrictions due to diet or religion</rdfs:comment>
+        <rdfs:label xml:lang="en">doNotAllowToEat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#doNotDigest -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#doNotDigest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Food restrictions caused by intolerances</rdfs:comment>
+        <rdfs:label xml:lang="en">doNotDigest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#eats -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#eats">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person"/>
+        <rdfs:range rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <rdfs:label xml:lang="en">eats</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#follows -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#follows">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person"/>
+        <rdfs:range rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Diet"/>
+        <rdfs:comment xml:lang="en">Every person follows a diet</rdfs:comment>
+        <rdfs:label xml:lang="en">follows</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasIntolerance -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasIntolerance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person"/>
+        <rdfs:range rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Intolerance"/>
+        <rdfs:comment xml:lang="en">Food intolerances</rdfs:comment>
+        <rdfs:label xml:lang="en">hasIntolerance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasKebab</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#isMoreRestrictiveThan -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#isMoreRestrictiveThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">A diet is more restrictive than another</rdfs:comment>
+        <rdfs:label xml:lang="en">isMoreRestrictiveThan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#onlyAllows -->
+
+    <owl:ObjectProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#onlyAllows">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">Restrictions due to religion</rdfs:comment>
+        <rdfs:label xml:lang="en">onlyAllows</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#kcal -->
+
+    <owl:DatatypeProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#kcal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">kcal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#name -->
+
+    <owl:DatatypeProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#price -->
+
+    <owl:DatatypeProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#price">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Cost of a single kebab</rdfs:comment>
+        <rdfs:label xml:lang="en">price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#surname -->
+
+    <owl:DatatypeProperty rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#surname">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">surname</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Animal -->
+
+    <rdf:Description rdf:about="http://dbpedia.org/ontology/Animal">
+        <owl:equivalentClass rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Animal"/>
+        <owl:disjointWith rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal"/>
+        <rdfs:label xml:lang="en">dbo:Animal</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Bird -->
+
+    <rdf:Description rdf:about="http://dbpedia.org/ontology/Bird">
+        <owl:disjointWith rdf:resource="http://dbpedia.org/ontology/Mammal"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Bird"/>
+        <rdfs:label xml:lang="en">dbo:Bird</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Disease -->
+
+    <rdf:Description rdf:about="http://dbpedia.org/ontology/Disease">
+        <rdfs:label xml:lang="en">dbo:Disease</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Food -->
+
+    <rdf:Description rdf:about="http://dbpedia.org/ontology/Food">
+        <rdfs:label xml:lang="en">dbo:Food</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Mammal -->
+
+    <rdf:Description rdf:about="http://dbpedia.org/ontology/Mammal">
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Mammal"/>
+        <rdfs:label xml:lang="en">dbo:Mammal</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Animal -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Animal">
+        <rdfs:subClassOf rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCategory"/>
+        <owl:disjointWith rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal"/>
+        <rdfs:label xml:lang="en">Animal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Bread -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Bread">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#ArabBread"/>
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#PitaBread"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#belongsTo"/>
+                        <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Bread"/>
+        <rdfs:label xml:lang="en">Bread</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Cereal -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Cereal">
+        <rdfs:subClassOf rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal"/>
+        <rdfs:comment xml:lang="en">Agricultural products</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Cereal"/>
+        <rdfs:label xml:lang="en">Cereal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Diet -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Diet">
+        <rdfs:subClassOf rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Restriction"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Diet"/>
+        <rdfs:label xml:lang="en">Diet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Doner -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Doner">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Filling"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#belongsTo"/>
+                        <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Animal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Falafel"/>
+        <rdfs:comment xml:lang="en">Meat filling</rdfs:comment>
+        <rdfs:label xml:lang="en">Doner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dressing -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dressing">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#belongsTo"/>
+                        <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Accompanying sauces</rdfs:comment>
+        <rdfs:label xml:lang="en">Dressing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Falafel -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Falafel">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Filling"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#belongsTo"/>
+                        <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Falafel are veggie balls usually made from chickpeas or beans</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Falafel"/>
+        <rdfs:label xml:lang="en">Falafel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Filling -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Filling">
+        <rdfs:subClassOf rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <rdfs:label xml:lang="en">Filling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCategory -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCategory">
+        <rdfs:subClassOf rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodRelated"/>
+        <rdfs:comment xml:lang="en">Categorization of food into major subdivisions into kingdoms</rdfs:comment>
+        <rdfs:label xml:lang="en">FoodCategory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCertification -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCertification">
+        <rdfs:subClassOf rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodRelated"/>
+        <rdfs:comment xml:lang="en">Religious certifications relating to the type and production of food</rdfs:comment>
+        <rdfs:label xml:lang="en">FoodCertification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodRelated -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodRelated">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Entity containing other classes related to the food macrocategory</rdfs:comment>
+        <rdfs:label xml:lang="en">FoodRelated</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Hinduism -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Hinduism">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Religion"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#doNotAllowToEat"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Beef"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianJudaism"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Hinduism"/>
+        <rdfs:label xml:lang="en">Hinduism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Intolerance -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Intolerance">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Disease"/>
+        <rdfs:label xml:lang="en">Intolerance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Islam -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Islam">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Religion"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganHiduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#onlyAllows"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Halal"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Islam"/>
+        <rdfs:label xml:lang="en">Islam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Judaism -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Judaism">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Religion"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganHiduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#onlyAllows"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kosher"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Judaism"/>
+        <rdfs:label xml:lang="en">Judaism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://dbpedia.org/ontology/Food"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#canBeCertified"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCertification"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#price"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Typical middle eastern dish</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Kebab"/>
+        <rdfs:label xml:lang="en">Kebab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Meat -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Meat">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <owl:disjointWith rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#MeatDerivate"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Meat"/>
+        <rdfs:label xml:lang="en">Meat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#MeatDerivate -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#MeatDerivate">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:comment xml:lang="en">Products derived from animals but not strictly meat</rdfs:comment>
+        <rdfs:label xml:lang="en">MeatDerivate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Diet"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#allowsToEat"/>
+                                <owl:someValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCategory"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousJudaism"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person">
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Person"/>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Religion -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Religion">
+        <rdfs:subClassOf rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Restriction"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Religion"/>
+        <rdfs:label xml:lang="en">Religion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Restriction -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Restriction">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Food restriction of the customer purchasing the kebab</rdfs:comment>
+        <rdfs:label xml:lang="en">Restriction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Diet"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#allowsToEat"/>
+                                <owl:someValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#doNotAllowToEat"/>
+                                <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Animal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#isMoreRestrictiveThan"/>
+                                <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganHiduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganJudaism"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal">
+        <rdfs:subClassOf rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCategory"/>
+        <rdfs:comment xml:lang="en">Kingdom of vegetal living beings</rdfs:comment>
+        <rdfs:label xml:lang="en">Vegetal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian -->
+
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Diet"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#allowsToEat"/>
+                                <owl:someValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#MeatDerivate"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#allowsToEat"/>
+                                <owl:someValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetal"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#doNotAllowToEat"/>
+                                <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Meat"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#isMoreRestrictiveThan"/>
+                                <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianJudaism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianHinduism"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianIslam"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
+                                <owl:hasValue rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianJudaism"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#ArabBread -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#ArabBread">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Bread"/>
+        <contains rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#GlutenCereal"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Khubz"/>
+        <rdfs:label xml:lang="en">ArabBread</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Beef -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Beef">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Mammal"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Beef"/>
+        <rdfs:label xml:lang="en">Beef</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacDisease -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacDisease">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Intolerance"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorous"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegan"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarian"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorous"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegan"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarian"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorous"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarian"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianJudaism"/>
+        <doNotDigest rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#GlutenCereal"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Coeliac_disease"/>
+        <rdfs:label xml:lang="en">CeliacDisease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorous -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorous">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</price>
+        <rdfs:label xml:lang="en">CeliacOmnivorous</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1300</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</price>
+        <rdfs:label xml:lang="en">CeliacOmnivorousHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</price>
+        <rdfs:label xml:lang="en">CeliacOmnivorousIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganHinduism"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.2</price>
+        <rdfs:label xml:lang="en">CeliacOmnivorousJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegan -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegan">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">CeliacVegan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianIslam"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">CeliacVeganHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">CeliacVeganIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">CeliacVeganJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarian -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarian">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</price>
+        <rdfs:label xml:lang="en">CeliacVegetarian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganIslam"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</price>
+        <rdfs:label xml:lang="en">CeliacVegetarianHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</price>
+        <rdfs:label xml:lang="en">CeliacVegetarianIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</price>
+        <rdfs:label xml:lang="en">CeliacVegetarianJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Chicken -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Chicken">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Bird"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Chicken"/>
+        <rdfs:label xml:lang="en">Chicken</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dairy -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dairy">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#MeatDerivate"/>
+        <rdfs:comment xml:lang="en">Products derived from animals and the processing of their milk</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Dairy_product"/>
+        <rdfs:label xml:lang="en">Dairy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#GlutenCereal -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#GlutenCereal">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Cereal"/>
+        <rdfs:label xml:lang="en">GlutenCereal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#GlutenFreeCereal -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#GlutenFreeCereal">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Cereal"/>
+        <rdfs:label xml:lang="en">GlutenFreeCereal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Halal -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Halal">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCertification"/>
+        <rdfs:comment xml:lang="en">Religious certifications relating to the type and production of food</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Halal"/>
+        <rdfs:label xml:lang="en">Halal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kosher -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kosher">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCertification"/>
+        <rdfs:comment xml:lang="en">Certification attributed to food prepared according to the rules of jewish law</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Kashrut"/>
+        <rdfs:label xml:lang="en">Kosher</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorous -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorous">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1400</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.1</price>
+        <rdfs:label xml:lang="en">LactoseCeliacOmnivorous</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.1</price>
+        <rdfs:label xml:lang="en">LactoseCeliacOmnivorousHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.1</price>
+        <rdfs:label xml:lang="en">LactoseCeliacOmnivorousIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1400</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.1</price>
+        <rdfs:label xml:lang="en">LactoseCeliacOmnivorousJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegan -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegan">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">LactoseCeliacVegan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">LactoseCeliacVeganHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">LactoseCeliacVeganIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">LactoseCeliacVeganJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarian -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarian">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</price>
+        <rdfs:label xml:lang="en">LactoseCeliacVegetarian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</price>
+        <rdfs:label xml:lang="en">LactoseCeliacVegetarianHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</price>
+        <rdfs:label xml:lang="en">LactoseCeliacVegetarianIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</price>
+        <rdfs:label xml:lang="en">LactoseCeliacVegetarianJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseIntolerance -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseIntolerance">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Intolerance"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorous"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacOmnivorousJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegan"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVeganJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarian"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseCeliacVegetarianJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorous"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganJudaism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarian"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianHinduism"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianIslam"/>
+        <allowsToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorous"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacOmnivorousJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegan"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVeganJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarian"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#CeliacVegetarianJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganJudaism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianHinduism"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianIslam"/>
+        <doNotAllowToEat rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianJudaism"/>
+        <doNotDigest rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dairy"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Lactose_intolerance"/>
+        <rdfs:label xml:lang="en">LactoseIntolerance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorous -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorous">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1400</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</price>
+        <rdfs:label xml:lang="en">LactoseOmnivorous</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</price>
+        <rdfs:label xml:lang="en">LactoseOmnivorousHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1400</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</price>
+        <rdfs:label xml:lang="en">LactoseOmnivorousIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseOmnivorousJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1400</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</price>
+        <rdfs:label xml:lang="en">LactoseOmnivorousJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</price>
+        <rdfs:label xml:lang="en">LactoseVegan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganHiduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganHiduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</price>
+        <rdfs:label xml:lang="en">LactoseVeganHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</price>
+        <rdfs:label xml:lang="en">LactoseVeganIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</price>
+        <rdfs:label xml:lang="en">LactoseVeganJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarian -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarian">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.6</price>
+        <rdfs:label xml:lang="en">LactoseVegetarian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.6</price>
+        <rdfs:label xml:lang="en">LactoseVegetarianHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.6</price>
+        <rdfs:label xml:lang="en">LactoseVegetarianIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegetarianJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.6</price>
+        <rdfs:label xml:lang="en">LactoseVegetarianJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Lamb -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Lamb">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Mammal"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Lamb_and_mutton"/>
+        <rdfs:label xml:lang="en">Lamb</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1300</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</price>
+        <rdfs:label xml:lang="en">OmnivorousHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</price>
+        <rdfs:label xml:lang="en">OmnivorousIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</price>
+        <rdfs:label xml:lang="en">OmnivorousJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#PitaBread -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#PitaBread">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Bread"/>
+        <contains rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#GlutenFreeCereal"/>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Pita"/>
+        <rdfs:label xml:lang="en">PitaBread</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#SpicySauce -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#SpicySauce">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dressing"/>
+        <rdfs:comment xml:lang="en">Contains chili pepper</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Hot_sauce"/>
+        <rdfs:label xml:lang="en">SpicySauce</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
+        <rdfs:label xml:lang="en">VeganHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
+        <rdfs:label xml:lang="en">VeganIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
+        <rdfs:label xml:lang="en">VeganJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianHinduism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianHinduism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">VegetarianHinduism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianIslam -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianIslam">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">VegetarianIslam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianJudaism -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianJudaism">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
+        <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">VegetarianJudaism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#WhiteSauce -->
+
+    <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#WhiteSauce">
+        <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dressing"/>
+        <contains rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dairy"/>
+        <rdfs:label xml:lang="en">WhiteSauce</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous">
+        <rdfs:label xml:lang="en">Omnivorous</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan">
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Veganism"/>
+        <rdfs:label xml:lang="en">Vegan</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian">
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Vegetarianism"/>
+        <rdfs:label xml:lang="en">Vegetarian</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://dbpedia.org/ontology/Disease"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Diet"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Religion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://dbpedia.org/ontology/Food"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCategory"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodCertification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Bread"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dressing"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Filling"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#FoodRelated"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Person"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Restriction"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Hinduism"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Islam"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Judaism"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
