@@ -32,7 +32,7 @@ public class App {
      * @param args eventuali parametri aggiunti all'avvio da terminale.
      */
     public static void main(String[] args) {
-        new ConsistencyChecker().getConsistency();
-        new ResultKebab().kebabComposing(new ChoicesLauncher().kebabCodeGeneration());
+        if (new ConsistencyChecker().getConsistency())
+            new ResultKebab().kebabComposing(new ChoicesLauncher().kebabCodeGeneration());
     }
 }

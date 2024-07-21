@@ -1090,9 +1090,9 @@
     
 
 
-    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous -->
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousDiet -->
 
-    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous">
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousDiet">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1172,6 +1172,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">OmnivorousDiet</rdfs:label>
     </owl:Class>
     
 
@@ -1205,9 +1206,9 @@
     
 
 
-    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan -->
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganDiet -->
 
-    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan">
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganDiet">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1224,7 +1225,7 @@
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#isMoreRestrictiveThan"/>
-                                <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+                                <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianDiet"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
@@ -1295,6 +1296,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Veganism"/>
+        <rdfs:label xml:lang="en">VeganDiet</rdfs:label>
     </owl:Class>
     
 
@@ -1309,9 +1312,9 @@
     
 
 
-    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian -->
+    <!-- https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianDiet -->
 
-    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian">
+    <owl:Class rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianDiet">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1332,7 +1335,7 @@
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#isMoreRestrictiveThan"/>
-                                <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
+                                <owl:allValuesFrom rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousDiet"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#hasKebab"/>
@@ -1403,6 +1406,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Vegetarianism"/>
+        <rdfs:label xml:lang="en">VegetarianDiet</rdfs:label>
     </owl:Class>
     
 
@@ -1932,7 +1937,7 @@
     <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVegan">
         <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
         <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
-        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</price>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
         <rdfs:label xml:lang="en">LactoseVegan</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1943,7 +1948,7 @@
     <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganHiduism">
         <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
         <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
-        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</price>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
         <rdfs:label xml:lang="en">LactoseVeganHinduism</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1954,7 +1959,7 @@
     <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganIslam">
         <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
         <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
-        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</price>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
         <rdfs:label xml:lang="en">LactoseVeganIslam</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1965,7 +1970,7 @@
     <owl:NamedIndividual rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#LactoseVeganJudaism">
         <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
         <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
-        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</price>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
         <rdfs:label xml:lang="en">LactoseVeganJudaism</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2031,6 +2036,7 @@
         <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
         <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</kcal>
         <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</price>
+        <rdfs:label xml:lang="en">Omnivorous</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2096,6 +2102,7 @@
         <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
         <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</kcal>
         <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</price>
+        <rdfs:label xml:lang="en">Vegan</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2139,6 +2146,7 @@
         <rdf:type rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Kebab"/>
         <kcal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kcal>
         <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</price>
+        <rdfs:label xml:lang="en">Vegetarian</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2183,28 +2191,6 @@
         <contains rdf:resource="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Dairy"/>
         <rdfs:label xml:lang="en">WhiteSauce</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous">
-        <rdfs:label xml:lang="en">Omnivorous</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan">
-        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Veganism"/>
-        <rdfs:label xml:lang="en">Vegan</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian">
-        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Vegetarianism"/>
-        <rdfs:label xml:lang="en">Vegetarian</rdfs:label>
-    </rdf:Description>
     
 
 
@@ -2259,9 +2245,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Omnivorous"/>
-            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegan"/>
-            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#Vegetarian"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#OmnivorousDiet"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VeganDiet"/>
+            <rdf:Description rdf:about="https://www.unicam.it/giorgiodellaroscia/KebabConfigurator#VegetarianDiet"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

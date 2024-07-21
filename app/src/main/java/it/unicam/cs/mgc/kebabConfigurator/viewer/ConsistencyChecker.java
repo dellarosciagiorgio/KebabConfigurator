@@ -23,13 +23,18 @@ import it.unicam.cs.mgc.kebabConfigurator.viewer.cleaner.CleanTerminal;
 public class ConsistencyChecker {
     /**
      * Richiede la verifica di consistenza dell'ontologia e ne stampa il risultato.
+     *
+     * @return flag booleano che indica la consistenza, o inconsistenza, dell'ontologia.
      */
-    public void getConsistency() {
+    public boolean getConsistency() {
         boolean consistent = new Controller().isConsistent();
         new CleanTerminal().clean();
         System.out.println("KEBAB CONFIGURATOR");
-        if (consistent)
+        if (consistent) {
             System.out.println("Consistent ontology");
-        else System.out.println("Inconsistent ontology");
+            return true;
+        }
+        System.out.println("Inconsistent ontology");
+        return false;
     }
 }

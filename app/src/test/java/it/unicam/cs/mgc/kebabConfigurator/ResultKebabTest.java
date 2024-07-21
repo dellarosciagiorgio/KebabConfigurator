@@ -27,7 +27,7 @@ public class ResultKebabTest {
     private ResultKebab resultKebab = new ResultKebab();
     private QueryCaller queryCaller = new QueryCaller();
     private final String kebabLabel = "LactoseVeganJudaism";
-    private final double kebabPrice = 3.4;
+    private final double kebabPrice = 3.5;
     private final int kebabKcal = 500;
 
     /**
