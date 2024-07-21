@@ -25,9 +25,9 @@ package it.unicam.cs.mgc.kebabConfigurator.model.sparql;
  */
 public enum QueryContainer implements DataQuery {
     ALL_KEBABS("SELECT ?label WHERE { ?kebab rdf:type kbb:Kebab . BIND(?kebab AS ?label). }"),
-    KEBAB_LABEL("SELECT ?label ?value WHERE { ?kebab rdf:type kbb:Kebab . ?kebab rdfs:label \"%s\"@en . ?kebab kbb:price ?price . BIND(?kebab AS ?label) . BIND(?kebab AS ?value) . }"),
-    KEBAB_PRICE("SELECT ?label ?value WHERE { ?kebab rdf:type kbb:Kebab . ?kebab rdfs:label \"%s\"@en . ?kebab kbb:price ?price . BIND(?kebab AS ?label) . BIND(?price AS ?value) . }"),
-    KEBAB_KCAL("SELECT ?label ?value WHERE { ?kebab rdf:type kbb:Kebab . ?kebab rdfs:label \"%s\"@en . ?kebab kbb:kcal ?kcal . BIND(?kebab AS ?label) . BIND(?kcal AS ?value) . }");
+    KEBAB_LABEL("SELECT ?label ?value WHERE { ?kebab rdf:type kbb:Kebab ; rdfs:label \"%s\"@en . BIND(?kebab AS ?label) . BIND(?kebab AS ?value) . }"),
+    KEBAB_PRICE("SELECT ?label ?value WHERE { ?kebab rdf:type kbb:Kebab ; rdfs:label \"%s\"@en ; kbb:price ?price . BIND(?kebab AS ?label) . BIND(?price AS ?value) . }"),
+    KEBAB_KCAL("SELECT ?label ?value WHERE { ?kebab rdf:type kbb:Kebab ; rdfs:label \"%s\"@en ; kbb:kcal ?kcal . BIND(?kebab AS ?label) . BIND(?kcal AS ?value) . }");
 
     private final String sparqlQuery;
 
