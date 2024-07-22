@@ -7,8 +7,8 @@ Once the parameters have been selected, the configurator will show the perfect k
 The application's logic is built upon an [ontology](./app/src/main/resources/) realized in Protégé.
 
 > [!TIP]
-> For an in-depth look at the project, please refer to the [report](./Relazione.pdf).
-> For detailed API documentation, check the [JavaDoc](./JavaDoc/).
+> + For an in-depth look at the project, please refer to the [report](./Relazione.pdf).
+> + For detailed API documentation, check the [JavaDoc](./JavaDoc/).
 
 ## Setup
 
